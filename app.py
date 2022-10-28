@@ -4,7 +4,7 @@ import requests
 def handler(event, context):
     username = event['username']
     
-    user_data = github.get_user_detail(username)
+    user_data = get_user_detail(username)
     return {
         'statusCode': 200,
         'body': json.dumps(user_data)
